@@ -1,0 +1,37 @@
+<div>
+	<span><span>Total: </span><span id="totalDisplaySpan"></span></span>
+	<button onclick="addOneClicked()">add one</button> 
+	
+</div>
+
+<script>
+let total = 0;
+
+function add(number){
+	total += number;
+}
+
+function addOneClicked(){
+	add(1);
+}
+
+let totalDisp = undefined;
+window.addEventListener('load', (event) => {
+	totalDisp = document.getElementById("totalDisplaySpan");
+});
+
+function update(){
+	if(totalDisp){
+    	totalDisp.innerText = total.toString();
+    }
+}
+
+
+function gameLoop(){
+  window.requestAnimationFrame(gameLoop);
+  update();
+}
+
+gameLoop();
+
+</script>
