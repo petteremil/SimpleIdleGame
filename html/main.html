@@ -8,6 +8,10 @@
 <div>
     <span style="color:wheat;"><span>Total: </span><span id="totalDisplaySpan"></span></span>
     <button onclick="game.add(1)">add one</button>
+    <div id="purchaseBtns" style="display: grid; grid-template-columns: 1fr">
+        <div class="buy-btn" style="display: none" data-buy-id="server"><button onclick="game.buyPurchasable('server')">Buy 1 server (1 per 1 sec per server). price: <span class="price-display"  data-buy-id="server"></span></button></div>
+        <div class="buy-btn" style="display: none" data-buy-id="developer"><button onclick="game.buyPurchasable('developer')">Buy developer server (1 per 0.5 sec per server). price: <span class="price-display" data-price-id="developer"></span></button></div>
+    </div>
 </div>
 
 <script src="Scripts/main.js"></script>
